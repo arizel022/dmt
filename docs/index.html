@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вивчай верстку сайтів HTML та CSS з ментором</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body id="body">
+
+    <!-- на стартовой странице шапка отсутствует, она будет только на страницах блога -->
+    <header class="header">
+        <div class="container">
+                <nav class="header__inner">
+    
+                    <div class="menu">
+                        <button class="menu__btn" type="button">
+                            <span class="sr-only">Відкрити головне меню</span>
+                            <span class="menu__line"></span>
+                        </button>
+                        <!--ссылка на эту же страницу ру-->
+                        <a class="menu__lang-btn" href="index-ru.html">
+                            <span class="sr-only">Вибір мови сторінк</span>
+                            <span class="menu__lang-txt active">ua</span>
+                            <span class="menu__lang-txt">ru</span>
+                        </a>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link int-link menu-hide" href="#program">
+                                    Що будемо вивчати
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link int-link menu-hide" href="#to">
+                                    Кому це корисно
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link int-link menu-hide" href="#how">
+                                    Як все проходитиме
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link int-link menu-hide" href="#footer">
+                                    Записатися
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link int-link" href="blog/blog.html">
+                                    Навчальні матеріали
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <a class="logo" href="#body">
+                        <img class="logo__img" src="images/logo.svg" alt="Логотип dementor" width="300" height="50">
+                    </a>
+    
+                    <address class="header__contact">
+                        <ul class="header__contact-list ">
+                            <li class="header__contact-item">
+                                <a class="header__contact-link header__contact-link--mail" href="mailto:arizel022@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    Записатися
+                                </a>
+                            </li>
+                            <li class="header__contact-item">
+                                <a class="header__contact-link header__contact-link--tlg" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                                    Спитати
+                                </a>
+                            </li>
+                            <li class="header__contact-item">
+                                <a class="header__contact-link header__contact-link--yt" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                                    Дивитися
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<div class="wrapper">
+    <main class="main">
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <h1 class="hero__title">
+                        Верстка сайтів
+                        <span class="hero__subtitle wow animate__animated animate__fadeInLeft">HTML та
+                            CSS</span>
+                        із ментором
+                    </h1>
+                    <p class="hero__text">
+                        Вивчай верстку сайтів з нуля разом із персональним ментором. Від рівня чайника за 8 тижнів ти
+                        будеш
+                        спроможний зверстати власний проект.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="program section" id="program">
+            <div class="container">
+                <h2 class="title">Що будемо вивчати</h2>
+                <div class="program__inner">
+                    <ul class="program__list">
+                        <li class="program__item active" id="card-html">
+                            <h3 class="program__subtitle">
+                                Базові навички верстки сайтів
+                            </h3>
+                            <ul class="program__content">
+                                <li class="program__txt">
+                                    Розмітка та її складові
+                                </li>
+                                <li class="program__txt">
+                                    Блочні та рядкові елементи
+                                </li>
+                                <li class="program__txt">
+                                    Ієрархія заголовків
+                                </li>
+                                <li class="program__txt">
+                                    Правила використання обгорток: відмова від div
+                                </li>
+                                <li class="program__txt">
+                                    Семантика HTML5
+                                </li>
+                                <li class="program__txt">
+                                    Як працювати з формами
+                                </li>
+
+                                <li class="program__txt">
+                                    Як працювати з компонентами
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="program__item" id="card-css">
+                            <h3 class="program__subtitle">
+                                Каскадні стилі CSS3
+                            </h3>
+                            <ul class="program__content">
+                                <li class="program__txt">
+                                    Flexbox и Grid Layout
+                                </li>
+                                <li class="program__txt">
+                                    Глобальні та локальні стилі
+                                </li>
+                                <li class="program__txt">
+                                    Як огранізувати відступи у верстці
+                                </li>
+                                <li class="program__txt">
+                                    Стилізація інтерактивних елементів
+                                </li>
+                                <li class="program__txt">
+                                    Відносні одиниці у CSS
+                                </li>
+                                <li class="program__txt">
+                                    Мобільний адаптив
+                                </li>
+                                <li class="program__txt">
+                                    Резинова верстка
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="program__item" id="card-des">
+                            <h3 class="program__subtitle">
+                                Advanced рівень роботи з проектом
+                            </h3>
+                            <ul class="program__content">
+                                <li class="program__txt">
+                                    Як працювати з терміналом
+                                </li>
+                                <li class="program__txt">
+                                    Створюємо власну збірку на Gulp
+                                </li>
+                                <li class="program__txt">
+                                    Базові поняття про препроцесори SCSS/SASS/LESS
+                                </li>
+                                <li class="program__txt">
+                                    Git
+                                </li>
+                                <li class="program__txt">
+                                    Поняття сутності та її перевикористання, інкапсуляція
+                                </li>
+                                <li class="program__txt">
+                                    Успадкування, повторе використання коду
+                                </li>
+                                <li class="program__txt">
+                                    SVG-спрайт
+                                </li>
+                                <li class="program__txt">
+                                    Як зібрати проект із окремих компонентів
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="program__item" id="card-cont">
+                            <h3 class="program__subtitle">
+                                Вивчаємо способи зробити сайт динамічним
+                            </h3>
+                            <ul class="program__content">
+                                <li class="program__txt">
+                                    Як працювати з анімаціями
+                                </li>
+                                <li class="program__txt">
+                                    Початковий jQuery
+                                </li>
+                                <li class="program__txt">
+                                    Інтерактивність
+                                </li>
+                                <li class="program__txt">
+                                    Accessibility
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="program__item" id="card-pls">
+                            <h3 class="program__subtitle">
+                                Оптимізація
+                            </h3>
+                            <ul class="program__content">
+                                <li class="program__txt">
+                                    Pixel-Perfect верстка
+                                </li>
+                                <li class="program__txt">
+                                    Що таке потік елементів
+                                </li>
+                                <li class="program__txt">
+                                    Як браузер рендерить сторінку
+                                </li>
+                                <li class="program__txt">
+                                    Тести швидкості завантаження сайту
+                                </li>
+                                <li class="program__txt">
+                                    Методи стискання зображень
+                                </li>
+                                <li class="program__txt">
+                                    Оптимізація підключень та скриптів у проекті
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                    <ul class="program__filter">
+                        <li class="program__mark">
+                            <button class="program__btn active" id="btn-html">html5</button>
+                        </li>
+                        <li class="program__mark">
+                            <button class="program__btn" id="btn-css">css3</button>
+                        </li>
+                        <li class="program__mark">
+                            <button class="program__btn" id="btn-des">scss</button>
+                        </li>
+                        <li class="program__mark">
+                            <button class="program__btn" id="btn-cont">dynamic</button>
+                        </li>
+                        <li class="program__mark">
+                            <button class="program__btn" id="btn-pls">speed</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="to section" id="to">
+            <div class="container container--small">
+                <h2 class="title">
+                    Кому це корисно.
+                    <br>
+                    Ця пропозиція для вас, якщо:
+                </h2>
+                <ul class="to__list">
+
+                    <li class="to__item to__item--cont wow animate__animated animate__rotateInUpLeft">
+                        <h3 class="subtitle to__subtitle">Новачкам</h3>
+                        <p class="to__text">
+                            Ви вважаєте себе повним чайником и прагнете отримати початковий рівень із верстки сайтів.
+                            Можна
+                            не боятися "відставати" від группи та спокійно розібратися як до чого разом із ментором.
+                        </p>
+                    </li>
+
+                    <li class="to__item to__item--dev wow animate__animated animate__rotateInUpLeft">
+                        <h3 class="subtitle to__subtitle">Фрилансерам з верстки</h3>
+                        <p class="to__text">
+                            Ви вже маєте комерційний досвід и верстаете лендинги та візитки. Але прагнете "прокачати"
+                            рівень, покращити якість своїх проектів та навчитися верстати набагато швидше.
+                        </p>
+                    </li>
+
+                    <li class="to__item to__item--design wow animate__animated animate__rotateInUpLeft">
+                        <h3 class="subtitle to__subtitle">Веб-спеціалістам</h3>
+                        <p class="to__text">
+                            Ви круто малюєте сайти або створюєте якісний контент для вебу. Тобто вже виконуєте важливі
+                            етапи
+                            у циклі створення сайту. Опанувавши верстку із ментором, ви зможете пропонувати своїм
+                            клієнтам
+                            сайт цілком, перетворюючи ідеї на код.
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="how section" id="how">
+            <div class="container">
+                <h2 class="title how__title">Як все проходитиме</h2>
+                <div class="how__content">
+                    <h3 class="subtitle subtitle--line wow animate__animated animate__fadeInLeft">
+                        Важливо
+                    </h3>
+                    <div class="how__inner">
+                        <p class="how__text">
+                            Навчання орієнтовано на осіб будь-якого віку, які бажають опанувати мистецтво створення
+                            веб-сторінок. Хто ви за профессією або фахом, і чим ви займалися раніше - неважливо. Якщо ви
+                            маєте досвід в айті-сфері - вам буде трохи простіше вчитися.
+                        </p>
+                        <p class="how__text">
+                            Після опанування всіх важливих тем ви будете в змозі створити власний веб-проект для себе
+                            або
+                            замовника <span class="alarm">самостійно</span>. Із цим вмінням ви можете виконувати
+                            замовлення
+                            із створення веб-сторінок за досить приємну фінансову винагороду. Або, за бажанням,
+                            продовжити
+                            навчання на шляху до рівня фронтентд-розробника.
+                        </p>
+                        <p class="how__text">
+                            Навчання виконується по частинах. Якщо у вас виникають труднощі на певному етапі, ми не
+                            йдемо
+                            далі, щоб не потонути у помилках і безоднях html-хаосу). Спокійно розбираємось із проблемною
+                            темою, <span class="alarm">разом із ментором</span> виконуючи завдання. Швикдість навчання у
+                            кожної людини індивідуальна. Якщо щось дається вам не одразу, головне - просто не
+                            зупинятися.
+                        </p>
+                    </div>
+                    <h3 class="subtitle subtitle--line wow animate__animated animate__fadeInRight">
+                        Як все проходить
+                    </h3>
+                    <div class="how__inner">
+                        <p class="how__text">
+                            Проходження повної програми із персональним ментором розраховане на <span class="alarm">2
+                                місяці</span>. Можна пройти лише базовий рівень протягом <span class="alarm">1
+                                місяця</span>. Це приблизно половина учбової програми, про яку написано вище на картках.
+                        </p>
+                        <p class="how__text">
+                            Якщо ви бажаєте навчитися верстати сайти, то <span class="alarm">залиште заявку</span>,
+                            написавши мені листа або повідомлення у месенджері (посилання внизу сторінки). Ми узгодимо
+                            дату
+                            початку навчання, ви виконаєте оплату курсу.
+                        </p>
+                        <p class="how__text">
+                            Вартість одного місяця навчання із персональним ментором - <span class="alarm">7000
+                                грн</span>.
+                        </p>
+                        <p class="how__text">
+                            Я можу навчати як українською, так і російською мовою, якщо вам так зручніше отримувати нові
+                            знання.
+                        </p>
+                        <p class="how__text">
+                            <span class="alarm alarm--red">Якщо ви живете на росії, ви не можете навчатися за цим курсом.</span>
+                        </p>
+                        <p class="how__text">
+                            Протягом курсу ви будете дивитися лекції, які я запишу персонально для вас. Також ви будете
+                            виконувати домашні завдання, які я буду перевіряти. Також ви будете читати багато додаткових
+                            матеріалів, багато гуглити.
+                        </p>
+
+                    </div>
+                    <h3 class="subtitle subtitle--line wow animate__animated animate__fadeInLeft">Чому все саме так</h3>
+                    <div class="how__inner">
+                        <p class="how__text">
+                            Персональний ментор працює <span class="alarm">лише з вами</span>. Немає группи, до якої ви
+                            входите. немає оцінок, як у школі. Навчання повністю орієнтоване на виконання практичних
+                            завдань. Якщо ви звикли вчитися, повторюючи за "Фрилансером по жизни" або іншим крутим
+                            блогером,
+                            тут буде більш корисний практичний підхід.
+                        </p>
+                        <p class="how__text">
+                            Ви будете постійно задавати мені запитання. <span class="alarm">Багато запитань!</span> Дуже
+                            багато складних, простих и навіть примітивних запитань. Це цілком нормально, більш того - це
+                            бажано! Я буду давати корисні поради і відповіді 7 днів на тиждень.
+                        </p>
+                        <p class="how__text">
+                            Ви маєте пам'ятати, що на 4-8 тижнів я - ваш персональний ментор. Не вчитель. Це означає, що
+                            я
+                            веду вас на екскурсію до "казкового світу сайтів". Ви йдете туди цілком самостійно. <span
+                                class="alarm">Ви прийняли рішення опанувати навик</span>. Моє завдання - постійно
+                            показувати
+                            вам напрям, давати підказки. Але не йти за вас, або пояснювати необхідність вчитися. Я буду
+                            постійно поруч, додавати якусь нову інформацію, питати про домашні завдання, буду набридати
+                            вам
+                            і стоятиму над душею. Тому що <span class="alarm">тільки так виробляється навичка.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="quick-to-top" id="quickToTop" href="#body">
+            <span class="sr-only">Повернутися на початок сторінки</span>
+        </a>
+    </main>
+</div>
+<footer class="footer" id="footer">
+    <div class="container footer__container">
+        <div class="footer__inner">
+
+            <address class="contact">
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--mail" href="mailto:arizel022@gmail.com" target="_blank" rel="noopener noreferrer">
+                            Записатися на курс
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--tlg" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                            Написати в Телеграм
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--yt" href="https://www.youtube.com/channel/UCu5HvEDwxvHa2yFvHuZLV9A" target="_blank" rel="noopener noreferrer">
+                            Навчальні відео
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+            <nav class="footer__menu">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="blog/html-dlya-pochatkivtsiv-chastyna-1.html">
+                            Лекція 1. HTML для початківців
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 2. Створюємо перший проект
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 3. Практика розмітки
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 4. Атрибути HTML 
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 5. Семантика HTML 5
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 6. впавіпаівапівапі
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</footer>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

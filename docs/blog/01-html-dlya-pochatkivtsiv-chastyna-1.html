@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекція 1. HTML для початківців</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/page.min.css">
+</head>
+
+<body id="body" class="body light">
+
+<!-- цей хедер актуальний тільки для блога та сторінок блога, для головних хедер - не компонент -->
+<header class="header">
+    <div class="container">
+            <nav class="header__inner">
+
+                <div class="menu">
+                    <a class="menu__main-link" href="../index.html">На головну</a>
+                </div>
+
+                <a class="logo" href="#body">
+                    <img class="logo__img" src="../images/logo.svg" alt="Логотип dementor" width="300" height="50">
+                </a>
+
+                <address class="header__contact">
+                    <ul class="header__contact-list ">
+                        <li class="header__contact-item">
+                            <a class="header__contact-link header__contact-link--mail" href="mailto:arizel022@gmail.com" target="_blank" rel="noopener noreferrer">
+                                Записатися
+                            </a>
+                        </li>
+                        <li class="header__contact-item">
+                            <a class="header__contact-link header__contact-link--tlg" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                                Спитати
+                            </a>
+                        </li>
+                        <li class="header__contact-item">
+                            <a class="header__contact-link header__contact-link--yt" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                                Дивитися
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="wrapper">
+    <main class="main">
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="index.html">
+                            Головна
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="blog.html">
+                            Список лекцій
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link">
+                            Лекція 1. HTML для початківців
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <article class="article">
+            <div class="container">
+                <h1 class="article__title">
+                    HTML для початківців (частина 1)
+                </h1>
+                <p class="article__text">
+                    Цей матеріал є стартовим. В ньому ми дізнаємося, що базово необхідно знати для того, щоб почати
+                    верстати сайти. Ми розглянемо найпростіші правила коду HTML, та як він пов’язаний із тим, що ми
+                    бачимо в браузері. Стаття про HTML для початківців стане основою, на якій ми побудуємо подальші
+                    знання. Весь матеріал я
+                    буду викладати максимально простою мовою. Для ліпшого розуміння рекомендую <a
+                        class="article__link int-link" href="#" target="_blank">вивчати основи HTML за відео</a>.
+                </p>
+                <section class="article__section">
+                    <h2 class="article__subtitle">
+                        Що ми бачимо, коли дивимося на сайт
+                    </h2>
+                    <p class="article__text">
+                        Коли ми хочемо позначити будь-що на сторінці – ми називатимемо це елементом. Наприклад,
+                        картинка, параграф тексту, заголовок, посилання, список, кнопка. Все це якісь конкретні
+                        елементи.
+                    </p>
+                    <dl class="article__vocab">
+                        <dt class="article__term">Елемент в HTML</dt>
+                        <dd class="article__def">
+                            Tекст, зображення, певний блок, посилання та будь-яка інша одиниця контенту.
+                        </dd>
+                    </dl>
+                    <p class="article__text">
+                        Елементами можуть бути не лише окремі одиниці. Якщо ми бачимо одразу купу картинок – це галерея,
+                        вона також є окремим елементом. Тобто, елементом може бути ціла група інших елементів.
+                    </p>
+                    <p class="article__text">
+                        Розуміння елементів – дуже просте. Але у процесі навчання мої учні часто не помічають деякі
+                        окремі елементи. Тому для ліпшого сприйняття наведемо приклад с коробками. Уявіть, що у вашій
+                        кімнаті багато коробок. Деякі з них великі, інші – середнього розміру. Є також маленькі. Є довгі
+                        коробки, і є також у формі куба. Усі ці коробки розкладені на полу у певному порядку – це і є
+                        наша сторінка. Деякі великі коробки мають всередині маленькі коробки, тобто вони вкладені одна в
+                        одну. Так і елементи в HTML можуть бути вкладені один в одного.
+                    </p>
+                </section>
+                <section class="article__section">
+                    <h2 class="article__subtitle">
+                        Поняття тегу HTML
+                    </h2>
+                    <p class="article__text">
+                        Тут все просто. Елементи, про які я щойно написав, - це і є теги. Уся сторінка HTML складається
+                        з певних тегів. Якщо ми відкриємо будь-який сайт у браузері та натиснемо ctrl + U, то побачимо
+                        багато складного коду. Якщо придивитися, то можна помітити спеціальні слова, які вкладені у
+                        спеціальні знаки БІЛЬШЕ і МЕНЬШЕ – це і є теги. Наприклад,
+                        <span class="symbol symbol--html">p</span>
+                    </p>
+                    <img class="article__img" src="../images/blog/articles/html-1/1.jpg"
+                        alt="приклад довільного коду html з інтернету" width="70%">
+                    <p class="article__text">
+                        Все, що знаходиться всередині знаків є ім’ям тега - <span
+                            class="symbol symbol--html">ІМ’Я_ТЕГА</span>
+                    </p>
+                    <dl class="article__vocab">
+                        <dt class="article__term">Тег HTML</dt>
+                        <dd class="article__def">
+                            Це спеціальна мітка для формування гіпертексту, яка вказує, який саме контент знаходиться
+                            всередині.
+                        </dd>
+                    </dl>
+                    <p class="article__text">
+                        Важливо розуміти, що теги бувають парні и непарні. Наприклад, тег <span
+                            class="symbol symbol--html">img</span> - непарний тег, він складається лише з однієї
+                        частини. Парні теги складаються з двох частин. Приклад парного – тег параграфа тексту. Спочатку
+                        ми відкриваємо тег, пишучи <span class="symbol symbol--html">p</span>. Потім друкуємо наш
+                        параграф тексту. Наприкінці ми повинні закрити тег за допомогою <span
+                            class="symbol symbol--html">/p</span>. Друга частина парного тегу така ж сама, як і перша,
+                        але ми дописуємо слеш.
+                    </p>
+                    <p class="article__text">
+                        Ось декілька прикладів парних і непарних тегів:
+                    </p>
+                    <img class="article__img" src="../images/blog/articles/html-1/2.jpg"
+                        alt="приклад парних і непарних тегів html" width="500" height="300">
+                </section>
+                <section class="article__section">
+                    <h2 class="article__subtitle">
+                        Щоб почати верстати, треба просто вивчити всі теги HTML ?
+                    </h2>
+                    <p class="article__text">
+                        Спеціально сідати і вчити теги не потрібно. Є певні базові теги, які ви запам’ятаєте дуже
+                        швидко, тому що будете використовувати їх скрізь. Деякі теги ви не використовуватимете майже
+                        ніколи. Усі інші вивчаться протягом практики.
+                    </p>
+                    <p class="article__text">
+                        Важливо розуміти, що починаючи верстку веб-сторінки, ви робите перші кроки на шляху розробника.
+                        А розробник – це людина, яка щось розробляє, не пише якийсь готовий код, а саме створює його зі
+                        своєї голови. А тому розробник завжди гуглить! Ви будете гуглити теги протягом навчання, і так
+                        само будете їх гуглити, досягнувши рівня senior-frontend. Це абсолютно нормально, більш того –
+                        бажано із самого початку шляху.
+                    </p>
+                    <p class="article__text">
+                        Ми будемо вчити HTML п’ятої версії, яка є останньою. У минулі часи відбувалися регулярні зміни
+                        версії, тому що мова розвивалася. Коли накопичувалося багато змін – їх вносили до нової версії,
+                        покращуючи специфікацію (величезний документ правил, згідно яких HTML так, як він працює). Після
+                        появи HTML 5 нові вдосконалення з’являються у специфікації БЕЗ зміни версії мови. Тобто зараз
+                        актуальна версія HTML – динамічна і постійно покращується.
+                    </p>
+                    <p class="article__text">
+                        Доречі, вивчаючи HTML ми будемо називати його саме мовою програмування. Багато сучасних
+                        розробників не згодні с цим ствердженням, тому що існують «справжні» мови програмування – JS,
+                        Python, Java тощо. Кому цікаво, можна почитати у окремому матеріалі –
+                        <a class="article__link int-link" href="#" target="_blank">Чому вважати HTML мовою не є
+                            помилкою</a>.
+                    </p>
+                </section>
+                <section class="article__section">
+                    <h2 class="article__subtitle">
+                        Базові теги HTML
+                    </h2>
+                    <p class="article__text">
+                        Для функціонування будь-якої веб-сторінки, яка написана мовою HTML, потрібні деякі базові теги,
+                        які ми зараз трохи розглянемо. Кожного разу перед тим, як починати верстку сторінки, ми будемо
+                        писати такий стартовий код:
+                    </p>
+                    <img class="article__img" src="../images/blog/articles/html-1/3.jpg" alt="стартовий код html"
+                        width="700" height="260">
+                    <p class="article__text">
+                        Зараз нас цікавить все, що написане <span style="color: #4f8cff;">блакитним кольором</span>.
+                        <span style="color: #fdfa51;">Жовті атрибути</span> та <span style="color: #79b83f;">зелені
+                            значення</span> розглянемо трохи пізніше. Цей код – необхідний мінімум для того, щоб наша
+                        сторінка працювала. Тепер розглянемо цей код по рядках.
+                    </p>
+                    <p class="article__text">
+                        Доречі, у розробці ми будемо дедалі частіше звертати увагу на певні рядки, тому важливо завжди
+                        залишати їх нумерацію, коли ви працюєте зі скріншотами коду. Важливо розуміти, що код, який ми
+                        напишемо, буде читати браузер. Він є спеціальною програмою, а простіше кажучи – роботом. Цей
+                        робот читає наш код (рендерить) зверху вниз, тобто з першого рядка по останній. Доки він це
+                        читає, виконується відображення сторінки.
+                    </p>
+                    <p class="article__text">
+                        На першому рядку ми вказуємо Тип Документу, завдяки чому браузер одразу розуміє , що далі буде
+                        написаний код мовою HTML 5.
+                    </p>
+                    <p class="article__text">
+                        Голова <span class="symbol symbol--html">head</span> - це своєрідна технічна частина сайту. У
+                        голові знаходяться «думки» - ми їх не бачимо, але саме тут вказані певні правила, за якими буде
+                        відображатися наша сторінка. Тут ми підключатимемо додаткові файли, шрифти, вказуватимемо
+                        наявність мобільної версії та заголовок у браузері, але про все це трохи згодом. Важливо
+                        розуміти, що всередині <span class="symbol symbol--html">head</span> буде те, що користувач не
+                        бачить.
+                    </p>
+                    <p class="article__text">
+                        Повністю інша ситуація із тегом <span class="symbol symbol--html">body</span> - саме тут ми
+                        писатимемо той код, відображення якого побачимо у браузері. Якщо всередині body просто написати
+                        якесь слово – воно одразу з’явиться на сторінці. Важливо розуміти, що тег <span
+                            class="symbol symbol--html">body</span> - величезна обгортка для усіх інших тегів.
+                        Пам’ятаєте приклад із коробками? Body у цьому прикладі – це підлога кімнати, на якій лежать
+                        коробки.
+                    </p>
+                </section>
+                <section class="article__section">
+                    <h2 class="article__subtitle">
+                        Вкладені теги, оформлення коду
+                    </h2>
+                    <p class="article__text">
+                        Я вже писав, що деякі теги вкладені один в інший. Це ті самі великі коробки, всередині яких одна
+                        або декілька менших. Як це може виглядати:
+                    </p>
+                    <img class="article__img" src="../images/blog/articles/html-1/4.jpg" alt="стартовий код html"
+                        width="70%">
+                    <p class="article__text">
+                        Ви могли помітити, що деякі теги вкладені в інші, а тому вони мають невеликий відступ вправо. Ці
+                        відступи дуже важливо робити. Вони ніяк не впливають на роботу коду, але є основою правилами
+                        оформлення. Якщо впливу немає, то яка різниця? Ви будете працювати з цим кодом, постійно його
+                        покращувати, а тому дуже важливо, щоб він міг читатися. Крім того, якщо ви робитимете проекти не
+                        лише для себе (а це буде стовідсотково), то з вашим кодом працюватимуть інші веб-розробники, а
+                        вони повинні мати змогу його читати.
+                    </p>
+                    <p class="article__text">
+                        Як робити відступи? Уявіть, що у вас велика коробка – це буде обгортка. А всередині – менша
+                        коробка, яка буде нашим елементом. Те що всередині – повинно мати відступ. Таким чином обгортка
+                        немовби обгортає свій вміст. Щоб було простіше – починайте вміст кожного тега з нового рядка,
+                        щоб завжди було видно вкладеності.
+                    </p>
+                    <p class="article__text">
+                        Елемент, який обгортає інший, називається батьківським по відношенню до нього. Так само,
+                        елемент, який вкладений в інший, називається дочірнім елементом.
+                    </p>
+                    <img class="article__img" src="../images/blog/articles/html-1/5.jpg"
+                        alt="батьківські і дочірні елементи html" width="70%">
+                    <p class="article__text">
+                        На цьому першу частину цього теоретичного матеріалу можна завершити. Відпочиньте, зробіть собі
+                        чаю. У другій частині розглянемо порядок дій, які потрібні, щоб почати активну практику.
+                    </p>
+                </section>
+                <ul class="article-nav">
+                    <li class="article-nav__item">
+                        <a class="article-nav__link article-nav__link--prev article-nav__link--disabled int-link" href="" title="Попередня лекція">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path d="M17 11h-7.586l2.293-2.293c0.391-0.391 0.391-1.023 0-1.414s-1.023-0.391-1.414 0l-4.707 4.707 4.707 4.707c0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293c0.391-0.391 0.391-1.023 0-1.414l-2.293-2.293h7.586c0.552 0 1-0.448 1-1s-0.448-1-1-1z"></path>
+                                </svg>
+                            Попередня лекція
+                        </a>
+                    </li>
+                    <li class="article-nav__item">
+                        <a class="article-nav__link article-nav__link--next int-link" href="" title="Наступна лекція">
+                            Наступна лекція
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path d="M13.293 7.293c-0.391 0.391-0.391 1.023 0 1.414l2.293 2.293h-7.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h7.586l-2.293 2.293c-0.391 0.391-0.391 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l4.707-4.707-4.707-4.707c-0.391-0.391-1.023-0.391-1.414 0z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <a class="quick-to-top" id="quickToTop" href="#body">
+            <span class="sr-only">Повернутися на початок сторінки</span>
+        </a>
+    </main>
+</div>
+<footer class="footer" id="footer">
+    <div class="container footer__container">
+        <div class="footer__inner">
+
+            <address class="contact">
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--mail" href="mailto:arizel022@gmail.com" target="_blank" rel="noopener noreferrer">
+                            Записатися на курс
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--tlg" href="https://t.me/arizel022" target="_blank" rel="noopener noreferrer">
+                            Написати в Телеграм
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a class="contact__link contact__link--yt" href="https://www.youtube.com/channel/UCu5HvEDwxvHa2yFvHuZLV9A" target="_blank" rel="noopener noreferrer">
+                            Навчальні відео
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+            <nav class="footer__menu">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="blog/html-dlya-pochatkivtsiv-chastyna-1.html">
+                            Лекція 1. HTML для початківців
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 2. Створюємо перший проект
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 3. Практика розмітки
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 4. Атрибути HTML 
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 5. Семантика HTML 5
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link int-link" href="#">
+                            Лекція 6. впавіпаівапівапі
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</footer>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
